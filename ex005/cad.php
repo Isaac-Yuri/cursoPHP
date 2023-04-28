@@ -11,8 +11,8 @@
     <h1>Resultado do processamento</h1>
     <main>
         <?php
-            $nome = $_GET["nome"];
-            $sobrenome = $_GET["sobrenome"];
+            $nome = $_GET["nome"] ?? "sem nome"; // o operador de coeficiência nula coloca um valor padrão caso não receba nada no primeiro campo.
+            $sobrenome = $_GET["sobrenome"] ?? "desconhecido";
             echo "<p>Então seu nome é <strong>$nome</strong> e seu sobrenome é <strong>$sobrenome</strong>?</p>"
         ?>
         <p>
